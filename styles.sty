@@ -1,0 +1,88 @@
+	% page settings
+	\usepackage[left=1.4cm,right=1.4cm,top=2cm,bottom=2cm]{geometry} % indents
+	\pagenumbering{gobble} % turn off page numbers
+	\renewcommand{\hrulefill}{\leavevmode\leaders\hrule height 1.5pt\hfill\kern 1pt} % thikness of lines between sections
+	\tolerance=1
+	\emergencystretch=\maxdimen
+	\hyphenpenalty=10000 % for surpressing auto-hypenation
+	\hbadness=10000
+
+	% font settings
+	\usepackage{fontspec}
+	\setmainfont{Noto Sans} % main font of the page, requires font installed on the machine
+	\newfontfamily\myFontForHeaders{Merriweather Black} % font for the headers, requires font installed on the machine
+	
+	% contact features
+	\usepackage{fontawesome5} % concact icons, requires FontAwesome font installed on the machine (download from https://fontawesome.com/download)
+	\usepackage{hyperref} % for creating references to the github, linkedid, mail
+
+	% positioning of tables
+	\usepackage{array} % for setting table columns width
+	\usepackage{calc}% for calculating table columns width
+	\newlength{\secondColumnLength} % variable for storing second column width
+	\setlength{\secondColumnLength}{140pt}
+	\newlength{\firstColumnLength} % variable for storing first column width (calculated value)
+	\setlength{\firstColumnLength}{\textwidth-\secondColumnLength - 11.5pt}  % TODO ADJUST SECOND COLUMN HERE
+	\usepackage{booktabs,ragged2e} % for right allignment of the second column
+	\newcolumntype{R}[1]{>{\RaggedLeft\arraybackslash}p{#1}}
+	% left fixed width:
+	\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+	% bullet lists support
+	\usepackage{enumitem}
+
+	% user defined colors
+	\usepackage{xcolor}
+	\definecolor{darkgray}{HTML}{6E7E85}
+	\definecolor{black}{HTML}{1C0F13}
+	\definecolor{blue}{HTML}{C98986}
+	\definecolor{background}{HTML}{FEFFFE}
+	\pagecolor{background}
+
+	% user defined environments and commands for text formatting
+	\newcommand{\myname}[1]{\begin{center}{\fontsize{24}{29}\myFontForHeaders\color{black} #1}\end{center}\vspace{-\baselineskip}}
+	\newcommand{\myposition}[1]{\vspace{-5pt}\begin{center} {\color{blue} #1}\end{center}\vspace{-\baselineskip}}
+	\newcommand{\myphone}[1]{{\fontsize{10}{12}\faIcon{mobile-alt}}{\small{ #1}}}
+	\newcommand{\mymail}[1]{{\fontsize{10}{12}\faIcon[regular]{envelope}}\href{mailto:#1}{ \small{#1}}}
+	\newcommand{\mygit}[1]{{\fontsize{10}{12}\faIcon{github}}\href{https://github.com/#1}{ \small{#1}}}
+	\newcommand{\mylinkedin}[1]{{\fontsize{10}{12}\faIcon{linkedin-in}}\href{https://www.linkedin.com/in/#1}{ \small{#1}}}
+	\newenvironment{contactinfo}{\vspace{-5pt}\begin{center}\color{black}}{\end{center}}
+	\newenvironment{resumeSection}[1]{\color{blue}{\fontsize{14}{17}\myFontForHeaders#1}\color{black}\hrulefill
+	}{}%{\vspace{-\parskip} % TODO optional spacing between sections}
+	\newcommand{\educationinfo}[4]{
+			\textcolor{darkgray}{
+				\begin{tabular}{@{}p{\firstColumnLength} R{\secondColumnLength}} 
+					\textbf{\textcolor{black}{#1}}&\textit {\textcolor{black}{#2}} \\ 
+	 	 			{#3} & \textit{#4} \\ 
+					\end{tabular}%\vspace{-\parskip}
+					}
+	}
+	\newcommand{\skillsinfo}[3]{
+		\begin{tabular}{@{}R{86pt} L{400pt}} % TODO adjust skills columns witdh
+			\textbf{Languages} & #1 \\ 
+			\textbf{Frameworks} & #2 \\ 
+			\textbf{Software and IDE} & #3  \\ 
+		\end{tabular}
+	}
+	\usepackage{xparse} % for multiple optional command arguments (m - {mandatory}, o - [optional])
+	\NewDocumentCommand\bulletlist{ooooo}{
+		\begin{itemize}[leftmargin=*]
+			%\itemsep -1pt %TODO ADJUST INTERVALS BETWEEN ITEMS IN LISTS
+			\IfNoValueTF{#1}{}{\item {#1}}
+	       		\IfNoValueTF{#2}{}{\item {#2}}
+			\IfNoValueTF{#3}{}{\item {#3}}
+			\IfNoValueTF{#4}{}{\item {#4}}
+			\IfNoValueTF{#5}{}{\item {#5}}
+	    	\end{itemize}
+	}	
+	\NewDocumentCommand\projectinfo{mmoooo}{
+		\textbf{#1}\vspace{-\parskip}
+
+		{#2}\vspace{-\parskip}
+
+		\IfNoValueTF{#3}{}{\bulletlist[#3][#4][#5][#6]} % add bullet point list if at least one optional argument provided
+	}
+	\NewDocumentCommand\experienceinfo{mmmmoooo}{
+		\educationinfo{#1}{#2}{#3}{#4}\vspace{-\baselineskip}
+		\IfNoValueTF{#5}{}{\bulletlist[#5][#6][#7][#8]} % add bullet point list if at least one optional argument provided
+	}

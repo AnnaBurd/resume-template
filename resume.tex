@@ -1,0 +1,97 @@
+\documentclass[10pt,a4paper,oneside]{letter} % create letter document
+	
+	% Reference to custom file with all styles - styles.sty
+	\usepackage{styles}
+
+\begin{document}
+
+	%Name	
+	\myname{Anna Burdanova}
+	%\myname{Анна Бурданова}
+	
+	%Position
+	\myposition{Software Engineer}
+	%\myposition{Java Developer Trainee}
+	
+	%Contact info 
+	\begin{contactinfo}
+		\myphone{+84-090-160-69-82}{|}
+		\mymail{burdanovaas@gmail.com}{|}
+		\mygit{AnnaBurd}{|}
+		\mylinkedin{AnnaBurd} 
+		% TODO add web-site
+	\end{contactinfo}
+
+	
+	%Education info
+	\begin{resumeSection}{Education }
+	%\begin{resumeSection}{Образование }
+
+		\educationinfo{University of the People}{USA, online}{Bachelor of Science in Computer Science, GPA 4.0/4.0}{Sept. 2021 - End of 2022}
+		%\educationinfo{University of the People}{USA, online}{Bachelor of Science in Computer Science, GPA 4.0/4.0}{Сент. 2021 - Дек. 2022}
+
+		\educationinfo{Gubkin Russian State University of Oil and Gas}{Russia, Moscow}{Bachelor of Science in Geology}{Sept. 2010 - June 2015}
+		%\educationinfo{РГУНГ имени И.М. Губкина}{Россия, Москва}{Горный инженер}{Сент. 2010 - Июнь 2015}
+	\end{resumeSection}
+	
+	%Skills section
+	\begin{resumeSection}{Skills }
+	%\begin{resumeSection}{Навыки }
+
+		\skillsinfo{Java, SQL, Python, VBA, R }{Spring, Hibernate, Flask, JUnit tests}{Eclipse, Android Studio, LaTex, Docker, Git}
+		%\skillsinfo{Java Core, основы Java EE (Servlets + JSP), юнит тесты JUnit, SQL, Python, R, VBA, HTML, CSS }{Spring Framework, Hibernate Framework, JDBC, JavaFX, Flask, Jinja}{Eclipse, Android Studio, LaTex, Docker, Git}
+	\end{resumeSection}
+	
+	%Projects info
+	\begin{resumeSection}{Projects }
+	%\begin{resumeSection}{Проекты }
+
+		\projectinfo{FamilyMoney - in development}{Web application on Heroku platform for planning family expedentures}
+		[Implemented database in PostgreSQL following the principles of normalization 3NF]
+		[Automated loading of the bank transactions info with Jsoup]
+		[Applyed Thymeleaf template engine for generating HTML pages]
+%		\projectinfo{FamilyMoney - в разработке}{Веб приложение на платформе Heroku для планирования семейных расходов}
+%		[Реализовала базу данных PostgreSQL с учетом требований нормализации 3NF]
+%		[Автоматизировала загрузку истории транзакций из онлайн банкинга через Jsoup]
+%		[Настроила геренацию HTML страниц с помощью Thymeleaf]
+	    
+		\projectinfo{Dogville game}
+			{2D pixel platformer game for Android smartphones, written on Java in Android Studio}
+			[Solved problems of multithread communication and increased bitmap rendering efficiency on canvas, the enhanced game cycle provides stable 60UPS and FPS on tested devices.][Designed a system of multitouch event handling with custom GUI, integrated with the in-game system of object collisions and interactions checks, supported on devices with screen aspect ratios of 4:3 and 16:9.]
+			[Optimized application memory releasing over 50Mb from unused objects and parallax moving background, profiler tests show even CPU/memory load and light energy levels.]
+%		\vspace{-\parskip} % уменьшить отступ - TODO убрать
+%		\projectinfo{Dogville игра}
+%			{2D пиксель платформер для Андроид смартфонов, написана на Java в Android Studio}
+%			[Решила проблемы многопоточной связи и повышения эффективность рендеринга изображений на канвас, спроектировала игровой цикл для обеспечения стабильных 60UPS и FPS на тестах.][Разработала систему обработки мультитач-событий с пользовательским графическим интерфейсом, интегрировала внутриигровую систему взаимодействий объектов, с поддержкой на устройствах с разрешением экрана 4:3 и 16:9.]
+%			[Оптимизировала потребление ресурсов с высвобождением более 50 МБ память за счет удаления невидимых объектов и параллакс эффектов на фоне. Тесты на profiler показывают равномерную загрузку ЦП / памяти и низкое энергопотребление.]
+	\end{resumeSection}
+	
+	%Experience info
+	\begin{resumeSection}{Experience }
+%	\begin{resumeSection}{Опыт }
+
+		\experienceinfo{OpenGenus}{Japan, online}{Software Developer Intern}{Apr. 2022 - June 2022}
+			[Worked on a Hibernate project and published 10 articles about application development strategies with Hibernate 6.]
+
+		\experienceinfo{SP Vietsovpetro}{Vietnam, Vung Tau}{Geological Engineer}{Sept. 2017 - Jan. 2022}
+			[Created a new tracking system to control 500 surface fluids samplings per year on all stages from sampling to analysis results, with automated invoices and reports and cut off 70\% of time spent on manual reports.]
+			[Collaborated with the IT department on the deployment of the company's web-portal report system, formalized user documentation, and consulted field operators on new features in 3 languages to speed up by 20\% transition from the old system of Excel reports to the web application.]
+%		\experienceinfo{СП Вьетсовпетро}{Вьетнам, Вунг Тау}{Инженер Геолог}{Сент. 2017 - Янв. 2022}
+%			[Создала систему трекинга проб скважинных флюидов в объемах 500 проб в год на всех стадиях обработки от отбора до оформления отчетов, с автоматической генерацие документации, сократила 70\% временных затрат на ручной ввод данных.]
+%			[Сотрудничала с ИТ предприятием в разработке и внедрении производственных функций веб-портала компании, оформляла пользовательскую документацию и консультировала скважинных операторов по работе с порталом на 3 языках, что ускорило на 20\% внедрение новой системы и уход от формирования рабочей документации в Excel.]
+
+		\experienceinfo{CTMP Centrmarkshejderiya}{Russia, Tula}{Geodesist}{June 2015 - Sept. 2017}
+			[Run on-filed tacheometric surveys with a team of geodesists, calculated coordinates in local and GPS systems, and enhanced time of preparing reposts by 10\% with AutoCAD automation tools.]
+%		\experienceinfo{АО ЦТМП «ЦЕНТРМАРКШЕЙДЕРИЯ»}{Россия, Тула}{Геодезист}{Июнь 2015 - Сент. 2017}
+%			[Проводила тахеометрические съемки в составе команды геодезистов, осуществляла пересчет координат из местной системы координат в GPS кооринаты и обратно, улучшила время оформления карт и планов на 10\% с помощью средств автомации AutoCAD.]
+	\end{resumeSection}
+	
+	%Languages info
+	\begin{resumeSection}{Languages }
+%	\begin{resumeSection}{Знание языков }
+
+		English (advanced), Russian, Vietnamese
+%		Английский язык (advanced), русский, вьетнамский (разговорный).
+	\end{resumeSection}
+	
+\end{document}
