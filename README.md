@@ -1,6 +1,24 @@
-### XeLaTex resume template
-<img src="https://github.com/AnnaBurd/resume_latex/blob/branch-en/img.svg" width="400">
+<!-- Preview -->
+<br />
+<div align="center">
+  <h3 align="center">LaTex/XeLaTex RESUME-Template</h3>
+    <p align="center">
+    A free LaTex resume template for software developers to automate tailoring and jumpstart your career!
+  </p>
+  <a href="https://github.com/AnnaBurd/resume_latex/">
+    <img src="/preview.png" alt="Preview" width="400">
+  </a>
+</div>
 
-Feel free to use document as template for own resume.
+## About The Project
+The resume, together with the cover letter, is the first step to getting an invitation to the job interview, that's why it is important to show that your skills and experience fit the best way for the job opening. The requirements of the programming stack and skills vary from position to position, so to increase the chances of getting noticed among hundreds and thousands of other candidates, the best strategy is to carefully tailor resume content for the specific position.
 
-This file is inspired by https://github.com/junhaodong/resume project, I removed most of the advanced features and refactored the code so the document structure and order of sections is easy to edit.
+This template is a simplified version of the <a href="https://github.com/junhaodong/resume">Awesome CV and Junhao Dong resume projects</a>, from which I removed most of the advanced features and refactored the code structure, so now the template is ready for automated tailoring.
+
+## Getting Started
+
+First, edit personal information in the `resume.tex` file with the TeXworks LaTex editor.
+
+To get resume in `.pdf` format, put `styles.sty` and `resume.tex` in the same folder and render `resume.tex` file, choose `XeLaTeX` engine to correctly render fonts.
+
+<a href="https://www.overleaf.com/read/whvrrvtydcmy">Edit Resume on Overleaf.com</a>
