@@ -1,0 +1,10 @@
+## Latex/XeLaTex log files:
+*.aux
+*.log
+*.out
+
+## Build tool auxiliary files:
+*.synctex
+*.synctex(busy)
+*.synctex.gz
+*.synctex.gz(busy)
