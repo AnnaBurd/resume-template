@@ -59,13 +59,12 @@
 	}
 
 	
-	\newcommand{\skillsinfo}[2]{
+	\newcommand{\skillsinfo}[3]{
 		\renewcommand{\arraystretch}{1.3}
-		\begin{tabular}{@{}R{106pt} L{2000pt}} % TODO adjust skills columns witdh
-			\textbf{Languages:} & #1 \\ %\rule{0pt}{25pt}
-			
+		\begin{tabular}{@{}R{156pt} L{2000pt}} % TODO adjust skills columns witdh
+			\textbf{Languages:} & #1 \\ %\rule{0pt}{25pt}			
 			\textbf{Frameworks:} & #2 \\ 
-			%\textbf{Software and IDE} & #3  \\ 
+			\textbf{Networks:} & #3  \\ 
 		\end{tabular}
 	}
 	\usepackage{xparse} % for multiple optional command arguments (m - {mandatory}, o - [optional])

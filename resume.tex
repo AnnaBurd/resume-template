@@ -1,47 +1,45 @@
 \documentclass[10pt,a4paper,oneside]{letter} % create letter document
 	
-	% Reference to custom file with all styles - styles.sty
+	% Reference to file with text formatting settings -  styles.sty
 	\usepackage{styles}
 
 \begin{document}
 
-	%Name	
+	%Name 	
 	\myname{Anna Burdanova}
 	
-	%Position
+	%Job Title - preferably the same as in the Job Posting
 	\myposition{Software Developer}
-	%\myposition{Java Developer Trainee}
 	
-	%Contact info 
+	%Personal contact information
 	\begin{contactinfo}
 		\myphone{+84-090-160-69-82}{|}
 		\mymail{burdanovaas@gmail.com}{|}
 		\mygit{AnnaBurd}{|}
 		\mylinkedin{AnnaBurd} 
-		% TODO add web-site
+		% TODO - include link to portfolio web-site
 	\end{contactinfo}
 	
-	%Education info
-	\begin{resumeSection}{Education }
+	%Education
+	\begin{resumeSection}{Education}
 
-		\educationinfo{University of the People}{USA, online}{Bachelor of Science in Computer Science, GPA 4.0/4.0}{Sept. 2021 - End of 2022}
+		\educationinfo{University of the People}{USA, online}{Bachelor of Science in Computer Science, GPA 4.0/4.0}{Sep. 2021 - Apr. 2023}
 
-		\educationinfo{Gubkin Russian State University of Oil and Gas}{Russia, Moscow}{Bachelor of Science in Geology}{Sept. 2010 - June 2015}
+		\educationinfo{Gubkin Russian State University of Oil and Gas}{Russia, Moscow}{Bachelor of Science in Geology}{Sep. 2010 - Jun. 2015}
 	\end{resumeSection}
 	
-	%Skills section
-	\begin{resumeSection}{Skills }
+	%Programming Stack - update for the Job Posting
+	\begin{resumeSection}{Skills}
 
-		\skillsinfo{Java, SQL, Python, VBA, R, LaTex}{Spring Boot, Hibernate, Thymeleaf, JUnit, Eclipse, Android Studio, Docker, Git}
+		\skillsinfo{Java, SQL, Python, VBA, R, LaTex}{Spring, Spring Boot, JPA/Hibernate, Thymeleaf, Maven, Git}{HTTP, Tomcat, REST API}
 	\end{resumeSection}
 	
-	%Projects info
-	\begin{resumeSection}{Projects }
+	%Personal projects
+	\begin{resumeSection}{Projects}
 
-		\projectinfo{FamilyMoney -.. todo...}{Web application on Heroku platform for planning family expedentures}
-		[Implemented database in PostgreSQL following the principles of normalization 3NF]
-		[Automated loading of the bank transactions info with Jsoup]
-		[Applyed Thymeleaf template engine for generating HTML pages]
+		\projectinfo{ProjectNameOnGithub // TODO!}{Web application on Heroku platform for planning family expedentures}
+		[// TODO! Implemented database in PostgreSQL following the principles of normalization 3NF]
+		[// TODO! Automated loading of the bank transactions info with Jsoup]
 	    
 		\projectinfo{Dogville game}
 			{2D pixel platformer game for Android smartphones, written on Java in Android Studio}
@@ -49,26 +47,26 @@
 			[Optimized application memory releasing over 50Mb from unused objects and parallax moving background, profiler tests show even CPU/memory load and light energy levels.]
 	\end{resumeSection}
 	
-	%Experience info
+	%Work experience and internships
 	\begin{resumeSection}{Experience }
 
-		\experienceinfo{OpenGenus}{Japan, online}{Software Developer Intern}{Apr. 2022 - June 2022}
-			[Published 10 articles on application development strategies with Spring Boot and Hibernate 6.]
-			[Completed a final project ... todo ...]
+		\experienceinfo{OpenGenus}{Japan, online}{Software Developer Intern}{Apr. 2022 - // TODO Jun. 2022}
+			[Completed internship program as and Hibernate and Spring Boot developer trainee.]
+			[Published 10 articles on OpenGenus domain and largely contributed to the publication of Hibernate Interview Questions book.]
 
-		\experienceinfo{SP Vietsovpetro}{Vietnam, Vung Tau}{Geological Engineer}{Sept. 2017 - Jan. 2022}
+		\experienceinfo{SP Vietsovpetro}{Vietnam, Vung Tau}{Geological Engineer}{Sep. 2017 - Jan. 2022}
 			[Created a new tracking system to control 500 surface fluids samplings per year on all stages from sampling to analysis results, with automated invoices and reports and cut off 70\% of time spent on manual reports.]
 			[Collaborated with the IT department on the deployment of the company's web-portal report system, formalized user documentation, and consulted field operators on new features in 3 languages to speed up by 20\% transition from the old system of Excel reports to the web application.]
 
 
-		\experienceinfo{CTMP Centrmarkshejderiya}{Russia, Tula}{Geodesist}{June 2015 - Sept. 2017}
+		\experienceinfo{CTMP Centrmarkshejderiya}{Russia, Tula}{Geodesist}{Jun. 2015 - Sep. 2017}
 			[Run on-filed tacheometric surveys with a team of geodesists, calculated coordinates in local and GPS systems, and enhanced time of preparing reposts by 10\% with AutoCAD automation tools.]
 	\end{resumeSection}
 	
 	%Languages info
 	\begin{resumeSection}{Languages }
 
-		English (advanced), Russian, Vietnamese
+		English, Russian, Vietnamese
 	\end{resumeSection}
 	
 \end{document}
