@@ -1,3 +1,4 @@
+
 <!-- Preview -->
 <br />
 <div align="center">
@@ -14,6 +15,7 @@
 The resume, together with the cover letter, is the first step to getting an invitation to the job interview, that's why it is important to show that your skills and experience fit the best way for the job opening. The requirements of the programming stack and skills vary from position to position, so to increase the chances of getting noticed among hundreds and thousands of other candidates, the best strategy is to carefully tailor resume content for the specific position.
 
 This template is a simplified version of the <a href="https://github.com/junhaodong/resume">Awesome CV and Junhao Dong resume projects</a>, from which I removed most of the advanced features and refactored the code structure, so now the template is ready for automated tailoring.
+
 
 ## Getting Started
 
