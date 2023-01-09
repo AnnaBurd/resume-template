@@ -2,6 +2,7 @@
 *.aux
 *.log
 *.out
+*.pdf
 
 ## Build tool auxiliary files:
 *.synctex

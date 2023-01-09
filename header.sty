@@ -1,0 +1,45 @@
+\newcommand{\name}[2] {
+  \begin{center}
+  \color{black}
+  \headerFont
+  \fontsize{24pt}{29pt}\selectfont #1   #2
+  \end{center}
+}
+
+\newcommand{\jobtitle}{
+  \centering
+  \color{blue}  
+}
+
+\newcommand{\verticalbar}{\rule[-0.4ex]{0.15ex}{1.1em}}
+
+\newcommand{\phone}[1]{
+  {\fontsize{10pt}{10pt}\selectfont\faIcon{mobile-alt}}
+  { #1 } \verticalbar
+}
+\newcommand{\email}[1]{
+  \href{mailto:#1}{
+  {\fontsize{10pt}{10pt}\selectfont\faIcon[regular]{envelope}}
+  { #1}} \verticalbar\hspace{-0.4em}
+}
+\newcommand{\website}[1]{
+  \href{https://#1}{
+  {\fontsize{10pt}{10pt}\selectfont\faIcon[regular]{window-restore}}
+  { #1}} \verticalbar\hspace{-0.7em}
+}
+\newcommand{\git}[1]{
+  \href{https://github.com/#1}{
+  {\fontsize{10pt}{10pt}\selectfont\faIcon[regular]{github}}
+  { #1}} \verticalbar\hspace{-0.5em}
+}
+\newcommand{\linkedin}[1]{
+  \href{https://www.linkedin.com/in/#1}{
+  {\fontsize{10pt}{10pt}\selectfont\faIcon[regular]{linkedin-in}}
+  { #1}}%\hspace{-0.5em}
+}
+
+\newenvironment{contactinfo}
+  {\begin{center}
+  \color{black}}
+  {\end{center}}
+

@@ -1,0 +1,20 @@
+\newenvironment{resumesection}[1]
+  {{\color{blue}
+  \headerFont
+  \fontsize{14pt}{17pt}\selectfont #1}
+  \color{black}\hrulefill}
+  {--- end of section}
+  
+\newcommand{\university}[4]{
+  \fontsize{10pt}{10pt}\selectfont
+  \begin{tabularx}{\textwidth}{X r}
+    \textcolor{black}{#1} & \textcolor{black}{#2}\\
+    \textcolor{darkgray}{#3} & \textcolor{darkgray}{#4}\\
+  \end{tabularx}
+}
+
+\newcommand{\skills}{
+
+Proficient with:
+
+}
