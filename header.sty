@@ -11,35 +11,36 @@
   \color{blue}  
 }
 
-\newcommand{\verticalbar}{\rule[-0.4ex]{0.15ex}{1.1em}}
+\newcommand{\spaceit}{\hspace{0.4em}}
+\newcommand{\vbarit}{\rule[-0.4ex]{0.15ex}{1.1em}}
+\newcommand{\iconit}[1]{
+  {\fontsize{9pt}{10pt}\selectfont\faIcon[solid]{#1}}
+}
+
+\newcommand{\email}[1]{
+  \spaceit\href{mailto:#1}{\iconit{envelope}\hspace{0.1em}#1} \spaceit\vbarit
+}
 
 \newcommand{\phone}[1]{
-  {\fontsize{10pt}{10pt}\selectfont\faIcon{mobile-alt}}
-  { #1 } \verticalbar
+  \spaceit\href{tel:#1}{\iconit{mobile-alt}\hspace{0.1em}#1} \spaceit\vbarit
 }
-\newcommand{\email}[1]{
-  \href{mailto:#1}{
-  {\fontsize{10pt}{10pt}\selectfont\faIcon[regular]{envelope}}
-  { #1}} \verticalbar\hspace{-0.4em}
-}
+
 \newcommand{\website}[1]{
-  \href{https://#1}{
-  {\fontsize{10pt}{10pt}\selectfont\faIcon[regular]{window-restore}}
-  { #1}} \verticalbar\hspace{-0.7em}
+  \spaceit\href{https://#1}{\iconit{globe}\hspace{0.1em}#1} \spaceit\vbarit
 }
+
 \newcommand{\git}[1]{
-  \href{https://github.com/#1}{
-  {\fontsize{10pt}{10pt}\selectfont\faIcon[regular]{github}}
-  { #1}} \verticalbar\hspace{-0.5em}
+  \spaceit\href{https://github.com/#1}{\iconit{github}\hspace{0.1em}#1} \spaceit\vbarit
 }
+
 \newcommand{\linkedin}[1]{
-  \href{https://www.linkedin.com/in/#1}{
-  {\fontsize{10pt}{10pt}\selectfont\faIcon[regular]{linkedin-in}}
-  { #1}}%\hspace{-0.5em}
+  \spaceit\href{https://www.linkedin.com/in/#1}{\iconit{linkedin-in}\hspace{0.1em}#1}
 }
+
 
 \newenvironment{contactinfo}
   {\begin{center}
-  \color{black}}
+  \color{black}
+  \fontsize{8pt}{10pt}\selectfont}
   {\end{center}}
 
