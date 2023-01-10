@@ -2,7 +2,7 @@
 <!-- Preview -->
 <br />
 <div align="center">
-  <h3 align="center">LaTex/XeLaTex RESUME-Template</h3>
+  <h3 align="center">LaTex(LuaLaTeX) RESUME-Template</h3>
     <p align="center">
     A free LaTex resume template for software developers to automate tailoring and jumpstart your career!
   </p>
