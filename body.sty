@@ -2,9 +2,12 @@
   {{\color{blue}
   \headerFont
   \fontsize{14pt}{17pt}\selectfont #1}
-  \color{black}\hrulefill}
-  {--- end of section}
+  \color{black}\hrulefill
   
+  }
+  {----------------}
+  
+
 \newcommand{\university}[4]{
   \fontsize{10pt}{10pt}\selectfont
   \begin{tabularx}{\textwidth}{X r}
@@ -13,8 +16,32 @@
   \end{tabularx}
 }
 
-\newcommand{\skills}{
+\newcommand{\skills}[3]{
+  \fontsize{10pt}{10pt}\selectfont
+    \textcolor{black}{#1}
+    
+    \textcolor{darkgray}{#2}
+  
+  \fontsize{10pt}{10pt}\selectfont #3
+  
+}
 
-Proficient with:
+\NewDocumentCommand\projectinfo{mmmmmmm}{
+  \fontsize{10pt}{10pt}\selectfont
+  \begin{tabularx}{\textwidth}{X r}
+    \textcolor{black}{\href{https://#3}{#1}} & \textcolor{black}{{\href{https://#3}{#2}}, {\href{https://#5}{#4}}}\\
+    \textcolor{darkgray}{#7} & \textcolor{darkgray}{#6}\\
+  \end{tabularx}
+}
 
+\NewDocumentCommand\experienceinfo{mmmm}{
+  \fontsize{10pt}{10pt}\selectfont
+  \begin{tabularx}{\textwidth}{X r}
+    \textcolor{black}{#1} & \textcolor{black}{#2}\\
+    \textcolor{darkgray}{#3} & \textcolor{darkgray}{#4}\\
+  \end{tabularx}
+}
+
+\NewDocumentCommand\achievements{oooooo}{
+	\bulletlist[#1][#2][#3][#4][#5][#6]
 }

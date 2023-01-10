@@ -7,9 +7,27 @@
 %%% PAGE SETTINGS
 \usepackage[left=1.4cm,right=1.4cm,top=2cm,bottom=2cm]{geometry}	% indents
 \pagenumbering{gobble}	% turn off page numbers
+\renewcommand{\hrulefill}
+	{\leavevmode\leaders\hrule height 1.5pt\hfill\kern 1pt} % thikness of lines between sections
 
 %%% TABLE SETTINGS
 \usepackage{tabularx}
+
+%%% BULLET LIST SETTINGS
+\usepackage{xparse}
+	\NewDocumentCommand\bulletlist{oooooooo}{
+		\begin{itemize}
+			%\itemsep -1pt %TODO ADJUST INTERVALS BETWEEN ITEMS IN LISTS
+			\IfNoValueTF{#1}{}{\item {#1}}
+	       	\IfNoValueTF{#2}{}{\item {#2}}
+			\IfNoValueTF{#3}{}{\item {#3}}
+			\IfNoValueTF{#4}{}{\item {#4}}
+			\IfNoValueTF{#5}{}{\item {#5}}
+			\IfNoValueTF{#6}{}{\item {#6}}
+			\IfNoValueTF{#7}{}{\item {#7}}
+			\IfNoValueTF{#8}{}{\item {#8}}
+	    	\end{itemize}
+	}
 
 %%% FONT SETTINGS
 \usepackage{fontspec}
