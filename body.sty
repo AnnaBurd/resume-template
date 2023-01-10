@@ -1,11 +1,12 @@
 \newenvironment{resumesection}[1]
-  {{\color{blue}
+  {\vspace*{0.1cm}
+  {\color{blue}
   \headerFont
   \fontsize{12pt}{16pt}\selectfont #1}
   \color{black}\hrulefill
   
   }
-  {----------------}
+  {}
 
 \newcommand{\grayit}[1]{
   \textcolor{darkgray}{#1}%{\textit{#1}}
@@ -17,7 +18,7 @@
   \textbf{\textcolor{black}{#1}}
 }
 
-\newcommand{\tableit}[4]{
+\newcommand{\tableit}[4]{  
   \fontsize{10pt}{10pt}\selectfont
   \begin{tabularx}{\textwidth}{@{}Xr@{}}
     \strongblackit{#1} & \blackit{#2}\\
@@ -26,10 +27,12 @@
 }  
   
 \newcommand{\university}[4]{
+  \vspace*{0.2cm}
   \tableit{#1}{#2}{#3}{#4}
 }
 
 \NewDocumentCommand\projectinfo{mmmmmmm}{
+  \vspace*{0.2cm}
   \tableit{\href{https://#3}{#1}}
   {{\href{https://#3}{#2}}, {\href{https://#5}{#4}}}
   {#7}
@@ -37,14 +40,17 @@
 }
 
 \NewDocumentCommand\experienceinfo{mmmm}{
+  \vspace*{0.2cm}
   \tableit{#1}{#2}{#3}{#4}
 }
 
 \NewDocumentCommand\achievements{oooooo}{
-	\bulletlist[#1][#2][#3][#4][#5][#6]
+  \vspace*{-0.3cm} % TODO adjust vertical spacing for pixel-perfect look
+  \bulletlist[#1][#2][#3][#4][#5][#6]
 }
 	
 \newcommand{\skills}[3]{
+  \vspace*{0.3cm}
   \fontsize{10pt}{10pt}\selectfont
     \strongblackit{#1}
     
