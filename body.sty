@@ -10,42 +10,44 @@
 \newcommand{\grayit}[1]{
   \textcolor{darkgray}{#1}%{\textit{#1}}
 }
-  
-  
-\newcommand{\university}[4]{
-  \fontsize{10pt}{10pt}\selectfont
-  \begin{tabularx}{\textwidth}{@{}Xr@{}}
-    \textcolor{black}{#1} & \textcolor{black}{#2}\\
-    \grayit{#3} & \grayit{#4}\\
-  \end{tabularx}
+\newcommand{\blackit}[1]{
+  \textcolor{black}{#1}%{\textit{#1}}
 }
 
-\newcommand{\skills}[3]{
+\newcommand{\tableit}[4]{
   \fontsize{10pt}{10pt}\selectfont
-    \textcolor{black}{#1}
-    
-    \grayit{#2}
+  \begin{tabularx}{\textwidth}{@{}Xr@{}}
+    \blackit{#1} & \blackit{#2}\\
+    \grayit{#3} & \grayit{#4}\\
+  \end{tabularx}
+}  
   
-  \fontsize{10pt}{10pt}\selectfont #3
-  
+\newcommand{\university}[4]{
+  \tableit{#1}{#2}{#3}{#4}
 }
 
 \NewDocumentCommand\projectinfo{mmmmmmm}{
-  \fontsize{10pt}{10pt}\selectfont
-  \begin{tabularx}{\textwidth}{X r}
-    \textcolor{black}{\href{https://#3}{#1}} & \textcolor{black}{{\href{https://#3}{#2}}, {\href{https://#5}{#4}}}\\
-    \grayit{#7} & \grayit{#6}\\
-  \end{tabularx}
+  \tableit{\href{https://#3}{#1}}
+  {{\href{https://#3}{#2}}, {\href{https://#5}{#4}}}
+  {#7}
+  {#6}
 }
 
 \NewDocumentCommand\experienceinfo{mmmm}{
-  \fontsize{10pt}{10pt}\selectfont
-  \begin{tabularx}{\textwidth}{X r}
-    \textcolor{black}{#1} & \textcolor{black}{#2}\\
-    \grayit{#3} & \grayit{#4}\\
-  \end{tabularx}
+  \tableit{#1}{#2}{#3}{#4}
 }
 
 \NewDocumentCommand\achievements{oooooo}{
 	\bulletlist[#1][#2][#3][#4][#5][#6]
+}
+	
+\newcommand{\skills}[3]{
+  \fontsize{10pt}{10pt}\selectfont
+    \textcolor{black}{#1}
+    
+  \fontsize{8pt}{8pt}\selectfont
+    \grayit{#2}
+  
+  \fontsize{10pt}{10pt}\selectfont #3
+  
 }
