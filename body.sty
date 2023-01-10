@@ -11,8 +11,14 @@
 \newcommand{\grayit}[1]{
   \textcolor{darkgray}{#1}%{\textit{#1}}
 }
+\newcommand{\grayitit}[1]{
+  \textcolor{darkgray}{\textit{#1}}
+}
 \newcommand{\blackit}[1]{
   \textcolor{black}{#1}%{\textit{#1}}
+}
+\newcommand{\blackitit}[1]{
+  \textcolor{black}{\textit{#1}}
 }
 \newcommand{\strongblackit}[1]{
   \textbf{\textcolor{black}{#1}}
@@ -21,8 +27,8 @@
 \newcommand{\tableit}[4]{  
   \fontsize{10pt}{10pt}\selectfont
   \begin{tabularx}{\textwidth}{@{}Xr@{}}
-    \strongblackit{#1} & \blackit{#2}\\
-    \grayit{#3} & \grayit{#4}\\
+    \strongblackit{#1} & \blackitit{#2}\\
+    \grayit{#3} & \grayitit{#4}\\
   \end{tabularx}
 }  
   
@@ -43,6 +49,7 @@
   \vspace*{0.2cm}
   \tableit{#1}{#2}{#3}{#4}
 }
+
 
 \NewDocumentCommand\achievements{oooooo}{
   \vspace*{-0.3cm} % TODO adjust vertical spacing for pixel-perfect look
