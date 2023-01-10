@@ -1,18 +1,22 @@
 \newenvironment{resumesection}[1]
   {{\color{blue}
   \headerFont
-  \fontsize{14pt}{17pt}\selectfont #1}
+  \fontsize{12pt}{16pt}\selectfont #1}
   \color{black}\hrulefill
   
   }
   {----------------}
-  
 
+\newcommand{\grayit}[1]{
+  \textcolor{darkgray}{#1}%{\textit{#1}}
+}
+  
+  
 \newcommand{\university}[4]{
   \fontsize{10pt}{10pt}\selectfont
   \begin{tabularx}{\textwidth}{X r}
     \textcolor{black}{#1} & \textcolor{black}{#2}\\
-    \textcolor{darkgray}{#3} & \textcolor{darkgray}{#4}\\
+    \grayit{#3} & \grayit{#4}\\
   \end{tabularx}
 }
 
@@ -20,7 +24,7 @@
   \fontsize{10pt}{10pt}\selectfont
     \textcolor{black}{#1}
     
-    \textcolor{darkgray}{#2}
+    \grayit{#2}
   
   \fontsize{10pt}{10pt}\selectfont #3
   
@@ -30,7 +34,7 @@
   \fontsize{10pt}{10pt}\selectfont
   \begin{tabularx}{\textwidth}{X r}
     \textcolor{black}{\href{https://#3}{#1}} & \textcolor{black}{{\href{https://#3}{#2}}, {\href{https://#5}{#4}}}\\
-    \textcolor{darkgray}{#7} & \textcolor{darkgray}{#6}\\
+    \grayit{#7} & \grayit{#6}\\
   \end{tabularx}
 }
 
@@ -38,7 +42,7 @@
   \fontsize{10pt}{10pt}\selectfont
   \begin{tabularx}{\textwidth}{X r}
     \textcolor{black}{#1} & \textcolor{black}{#2}\\
-    \textcolor{darkgray}{#3} & \textcolor{darkgray}{#4}\\
+    \grayit{#3} & \grayit{#4}\\
   \end{tabularx}
 }
 
