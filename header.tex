@@ -1,0 +1,67 @@
+\newcommand{\firstname}{Anna}
+\newcommand{\lastname}{Burdanova}
+\newcommand{\email}{burdanovaas@gmail.com}
+\newcommand{\phone}{(+84) 09-0160-6982}
+\newcommand{\website}{annaburdanova.com}
+\newcommand{\git}{AnnaBurd}
+\newcommand{\linkedin}{AnnaBurd}
+
+\newcommand{\header}[2]{
+	\ifstrequal{#2}{right}
+		{\begin{flushright}
+			\printname\\
+			\printjobtitle{#1}\\
+			\printcontacts
+		\end{flushright}}
+		{\begin{center}
+			\printname\\
+			\printjobtitle{#1}\\
+			\printcontacts
+		\end{center}}
+}
+
+\newcommand{\printname}{
+	{\color{black}
+	\headerFont
+	\fontsize{20pt}{24pt}\selectfont 
+	\firstname\hspace{0.2em}\lastname}
+}
+
+\newcommand{\printjobtitle}[1]{
+	{\color{blue}
+	#1}
+}
+
+\newcommand{\printcontacts}{
+	{\color{black}
+	\fontsize{8pt}{10pt}\selectfont
+	\printemail\printbar
+	\printphone\printbar
+	\printwebsite\printbar
+	\printgit\printbar
+	\printlinkedin}
+}
+
+\newcommand{\printbar}{
+	\hspace{0.25em}\rule[-0.07em]{0.1em}{0.85em}\hspace{0.17em}
+}
+
+\newcommand{\loadicon}[1]{
+	{\fontsize{9pt}{10pt}\selectfont\faIcon[solid]{#1}}
+}
+
+\newcommand{\printemail}{
+	\href{mailto:\email}{\loadicon{envelope}\hspace{0.1em}\email}
+}
+\newcommand{\printphone}{
+	\href{tel:\phone}{\loadicon{mobile-alt}\hspace{0.1em}\phone}
+}
+\newcommand{\printwebsite}{
+	\href{https://\website}{\loadicon{globe}\hspace{0.1em}\website}
+}
+\newcommand{\printgit}{
+	\href{https://github.com/\git}{\loadicon{github}\hspace{0.1em}\git}
+}
+\newcommand{\printlinkedin}{
+	\href{https://www.linkedin.com/in/\linkedin/}{\loadicon{linkedin-in}\hspace{0.1em}\linkedin}
+}

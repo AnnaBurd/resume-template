@@ -1,6 +1,6 @@
 \documentclass[10pt,a4paper]{article} % basic template for the document
 
-%%% LANUGAGE SETTINGS
+%%% LANGUAGE SETTINGS
 %\usepackage[utf8x]{inputenc}	% support russian language for non utf-based engines 
 %\usepackage[russian]{babel}
 
@@ -9,6 +9,7 @@
 \pagenumbering{gobble}	% turn off page numbers
 \emergencystretch=\maxdimen % surpress auto-hypenation
 \hyphenpenalty=10000 % surpress auto-hypenation
+\setlength{\parindent}{0pt} % supress auto-indents of first paragraphs
 
 \renewcommand{\hrulefill}
 	{\leavevmode\leaders\hrule height 1.5pt\hfill\kern 1pt} % thikness of lines between sections
@@ -42,12 +43,23 @@
 
 %%% COLOR SETTINGS
 \usepackage{xcolor}
+
 \definecolor{darkgray}{HTML}{6E7E85}
 \definecolor{black}{HTML}{1C0F13}
 \definecolor{blue}{HTML}{C98986}
 \definecolor{background}{HTML}{FEFFFE}
+
 \pagecolor{background}
 
 %%% SOCIAL ICONS AND LINKS
 \usepackage{fontawesome5}
 \usepackage{hyperref}
+
+%%% CONDITIONALS
+\usepackage{etoolbox}
+
+%%% GRAPHICS
+\usepackage{tikz}
+%\usepackage{graphicx}
+%\usepackage{float}
+\usetikzlibrary{positioning}
