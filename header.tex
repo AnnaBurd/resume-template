@@ -11,12 +11,13 @@
 		{\begin{flushright}
 			\printname\\
 			\printjobtitle{#1}\\
-			\printcontacts
+			\printcontacts\\
+			\printphoto
 		\end{flushright}}
 		{\begin{center}
 			\printname\\
 			\printjobtitle{#1}\\
-			\printcontacts
+			\printcontacts			
 		\end{center}}
 }
 
@@ -64,4 +65,12 @@
 }
 \newcommand{\printlinkedin}{
 	\href{https://www.linkedin.com/in/\linkedin/}{\loadicon{linkedin-in}\hspace{0.1em}\linkedin}
+}
+
+\newcommand{\printphoto}{
+\begin{tikzpicture}[remember picture,overlay,shift={(current page.north west)}]
+	\clip[draw](4,-2.5) circle (1.6cm); % Clip photo (xshift,yshift) (size)
+	\node[anchor=north west, circle, inner sep=0pt, xshift=2cm, yshift=-1cm]
+	{\includegraphics[width=4cm]{photo.jpg}};
+\end{tikzpicture}
 }
