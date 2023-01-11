@@ -7,7 +7,8 @@
     A free LaTex resume template for software developers to automate tailoring and jumpstart your career!
   </p>
   <a href="https://github.com/AnnaBurd/resume_latex/">
-    <img src="/preview.svg" alt="Preview" width="400">
+    <img src="/cv.png" alt="Preview" width="400">
+    <img src="/cover.png" alt="Preview" width="400">
   </a>
 </div>
 
