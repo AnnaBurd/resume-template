@@ -23,6 +23,10 @@
 \newcommand{\strongblackit}[1]{
   \textbf{\textcolor{black}{#1}}
 }
+\newcommand{\smallit}[1]{
+  {#1}
+  
+}
 
 \newcommand{\tableit}[4]{  
   \fontsize{10pt}{10pt}\selectfont
@@ -57,13 +61,15 @@
 }
 	
 \newcommand{\skills}[3]{
-  \vspace*{0.3cm}
-  \fontsize{10pt}{10pt}\selectfont
-    \strongblackit{#1}
-    
-  \fontsize{8pt}{8pt}\selectfont
-    \grayit{#2}
-  
-  \fontsize{10pt}{10pt}\selectfont #3
+%  \vspace*{0.3cm}
+	\begin{center}
+	  \fontsize{10pt}{10pt}\selectfont
+	    \strongblackit{#1}
+	    
+	  \fontsize{8pt}{8pt}\selectfont
+	    \grayit{#2}
+	  
+	  \fontsize{10pt}{10pt}\selectfont #3
+	\end{center}
   
 }
