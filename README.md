@@ -22,6 +22,6 @@ This template is a simplified version of the <a href="https://github.com/junhaod
 
 First, edit personal information in the `resume.tex` file with the TeXworks LaTex editor.
 
-To get resume in `.pdf` format, put all `.sty` and `.tex` file to the same folder and open and render `cv.tex` file in LaTeX editor (choose `LuaLaTeX` engine).
+To get resume in `.pdf` format, put all `.sty` and `.tex` files to the same folder and open and render `cv.tex` file in LaTeX editor (choose `LuaLaTeX` engine).
 
 <a href="https://www.overleaf.com/read/whvrrvtydcmy">Edit Resume on Overleaf.com</a>
