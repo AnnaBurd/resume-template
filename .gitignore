@@ -1,11 +1,12 @@
+## Generated output files:
+*.pdf
+
 ## Latex/XeLaTex log files:
 *.aux
 *.log
 *.out
-##*.pdf
 
 ## Build tool auxiliary files:
-*.synctex
-*.synctex(busy)
-*.synctex.gz
-*.synctex.gz(busy)
+*.synctex*
+*.fls
+*.fdb_latexmk

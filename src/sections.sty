@@ -1,0 +1,93 @@
+% repeatable text styles
+\newcommand{\stylestrong}[1]{
+    \textbf{\textcolor{color-text}{#1}}
+}
+
+\newcommand{\styleitalic}[1]{
+    \textcolor{color-text}{\textit{#1}}
+}
+
+\newcommand{\styleemphasis}[1]{
+    {\textcolor{color-text-light}{#1}}
+}
+
+\newcommand{\styleemphasisitalic}[1]{
+    \textit{\textcolor{color-text-light}{#1}}
+}
+
+% repeatable table layout
+\newcommand{\tablelayout}[4]{
+    \fontsize{11pt}{11pt}\selectfont
+    \begin{tabularx}{\textwidth}{@{}Xr@{}}
+        \stylestrong{#1} & \styleitalic{#2}\\
+        \styleemphasis{#3} & \styleemphasisitalic{#4}\\
+    \end{tabularx}
+}
+
+% repeatable table layout with merged columns
+\renewcommand\cellalign{cl}
+\newcommand{\tablelayoutmerged}[3]{
+    \fontsize{11pt}{11pt}\selectfont
+    \begin{tabularx}{\textwidth}{@{}Xr@{}}
+        \stylestrong{#1} & \styleitalic{#2}\\
+        \multicolumn{2}{@{}l}{\styleemphasis{\makecell{#3}}}\\
+    \end{tabularx}
+}
+
+% thikness of lines between sections
+\renewcommand{\hrulefill}
+	{\leavevmode\leaders\hrule height 0.6pt\hfill\kern 1pt} 
+
+% resume section box with title and separator line
+\newenvironment{resumesection}[1]{
+    {\vspace*{0.1cm}\color{color-accent}\subheaderFontFamily\fontsize{11pt}{11pt}\selectfont #1}
+    {\color{color-ruler}\hrulefill
+
+    \vspace*{0.1cm}
+    }
+}{}
+
+% list of skills
+\newcommand{\skillslist}[3]{
+    \vspace*{-0.3em}
+	\begin{center}
+        \fontsize{11pt}{11pt}\selectfont
+          \stylestrong{#1}
+        
+        \fontsize{8pt}{8pt}\selectfont
+          \styleemphasis{#2}
+        
+        \fontsize{11pt}{11pt}\selectfont #3
+      \end{center}
+      \vspace*{-0.6em}
+}
+
+% information about completed projects
+\NewDocumentCommand\projectinfo{mmmmmmo}{
+    \vspace*{0.2cm}
+    \IfNoValueTF{#7}
+        {\tablelayoutmerged{#1}{{\href{#3}{#2}}, {\href{#5}{#4}}}{#6}}
+        {\tablelayout{#1}{{\href{#3}{#2}}, {\href{#5}{#4}}}{#6}{#7}}
+
+}
+
+% information about work experience/education
+\newcommand{\sectioninfo}[4]{
+    \vspace*{0.2cm}
+    \tablelayout{#1}{#2}{#3}{#4}
+}
+
+% bullet list of achievements
+\NewDocumentCommand\bulletlist{oooooooo}{
+    \vspace*{-0.5em}
+    \begin{itemize}[label={\color{color-text-light}\textbullet}, itemsep=0.1em, topsep=0.2cm, labelsep=0.2cm]
+        \IfNoValueTF{#1}{}{\item {#1}}
+        \IfNoValueTF{#2}{}{\item {#2}}
+        \IfNoValueTF{#3}{}{\item {#3}}
+        \IfNoValueTF{#4}{}{\item {#4}}
+        \IfNoValueTF{#5}{}{\item {#5}}
+        \IfNoValueTF{#6}{}{\item {#6}}
+        \IfNoValueTF{#7}{}{\item {#7}}
+        \IfNoValueTF{#8}{}{\item {#8}}
+    \end{itemize}
+}

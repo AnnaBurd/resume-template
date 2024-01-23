@@ -1,0 +1,58 @@
+\documentclass[10pt,a4paper]{article} % basic template for the document
+
+%%% FONT SETTINGS %%%
+\usepackage{fontspec}
+\setmainfont{PT Sans}
+\newfontfamily\headerFontFamily[UprightFont={* ExtraBold}]{Open Sans}
+\newfontfamily\subheaderFontFamily[UprightFont={* Bold}]{Open Sans}
+
+%%% COLOR SETTINGS %%%
+\usepackage{xcolor}
+\definecolor{color-text}{HTML}{222222}
+\definecolor{color-text-light}{HTML}{907f8c}
+\definecolor{color-bg}{HTML}{ffffff}
+\definecolor{color-accent}{HTML}{639FAB}
+\definecolor{color-ruler}{HTML}{d3d3d3}
+
+%%% SOCIAL ICONS %%%
+\usepackage{fontawesome5}
+
+%%% HYPERLINKS %%%
+\usepackage{hyperref}
+
+%%% PAGE SETTINGS %%%
+% page margins
+\usepackage[left=2.54cm,right=2.54cm,top=2cm,bottom=2cm]{geometry}
+
+% page numbering
+\pagenumbering{gobble}	% turn off page numbers
+
+% surpress auto-hypenation
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+
+% surpress auto-indents of first paragraphs
+\setlength{\parindent}{0pt}
+
+% page background color
+\pagecolor{color-bg}
+
+
+%%% TABLE SETTINGS %%%
+% allow to set a table with the requested total width
+\usepackage{tabularx}
+% allow line breaks in table cells
+\usepackage{makecell}
+
+%%% BULLET LIST SETTINGS %%%
+\usepackage{enumitem}
+% allow optional arguments for bullet lists
+\usepackage{xparse}
+
+
+
+%%% LANGUAGE SETTINGS %%%
+% support russian language for non utf-based engines
+\usepackage[utf8x]{inputenc}
+\usepackage[russian]{babel}
+
