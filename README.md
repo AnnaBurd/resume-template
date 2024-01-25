@@ -29,7 +29,7 @@ This template is a simplified version inspired by the [Awesome CV and Junhao Don
 
 3. Set `latex-workshop.latex.build.forceRecipeUsage: false` in VSCode configuration file `settings.json` - this enables "Magic Comments" of the LaTex Workshop extension.
 4. Update file content in `src/contacts.tex` and `src/content.tex`.
-5. Open `resume.tex` and build file with `Ctrl+Alt+B` or with an extension button.
+5. Open `resume.tex` or `resume-v1.tex` or `резюме.tex` and build file with `Ctrl+Alt+B` or with an extension button.
 
 ## Contributions
 

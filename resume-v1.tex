@@ -1,0 +1,34 @@
+% Enable magic comments to set the root document and compiler -> set   "latex-workshop.latex.build.forceRecipeUsage": false, in VSCode settings.json
+
+% "Magic" comment of the VS Code Latex-Workshop extension to set the root document, see https://github.com/James-Yu/LaTeX-Workshop/wiki/Compile#the-root-file
+% !TEX root = resume-v1.tex
+
+% "Magic" comment of the VS Code Latex-Workshop extension to set the compiler, see https://github.com/James-Yu/LaTeX-Workshop/wiki/Compile#magic-comments
+% !TEX program = xelatex
+
+\input{src/preamble.tex}
+\input{src/sections.sty}
+\input{src/contacts.tex}
+\input{src/content.tex}
+
+\begin{document}
+
+    \begin{center}
+        \name{\firstname}{\lastname}
+
+        \position{\jobtitle}
+    
+        \contactsrow
+    \end{center}
+ 
+    \aboutme{\about}
+
+    \skillssection
+
+    \projectssection
+
+    \experiencesection
+
+    \twocolumnlayout{\educationsection}{\certificationssection}
+
+\end{document}

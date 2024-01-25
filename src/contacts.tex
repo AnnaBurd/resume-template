@@ -11,6 +11,7 @@
   \end{tabular}
 }
 
+% list of contacts in a 3-column table
 \newcommand{\contacts}{
 \fontsize{9pt}{9pt}\selectfont
 \threecolumntable
@@ -19,24 +20,23 @@
     {\href{https://github.com/\git}{\color{color-accent}\faIcon{github}\hspace{0.25em}\fontsize{9pt}{9pt}\selectfont\color{color-text}\git}}
     {\href{tel:\phone}{\color{color-accent}\faIcon{phone-square-alt}\hspace{0.25em}\fontsize{9pt}{9pt}\selectfont\color{color-text}\phone}}
     {\href{https://www.linkedin.com/in/\linkedin/}{\color{color-accent}\faIcon{linkedin}\hspace{0.25em}\fontsize{9pt}{9pt}\selectfont\color{color-text}\linkedin}}
-
-
-  
-   
     
 }
-% \newcommand{\contacts}{
-%     {\color{color-text}
-%     \fontsize{10pt}{12pt}\selectfont
-%     {\href{mailto:\email}{\faIcon{at}\hspace{0.25em}\fontsize{9pt}{10pt}\selectfont\email}}\horizontalseparator
-%     {\href{tel:\phone}{\faIcon{phone-square-alt}\hspace{0.25em}\fontsize{9pt}{10pt}\selectfont\phone}}\horizontalseparator
-%     {\href{https://www.linkedin.com/in/\linkedin/}{\faIcon{linkedin}\hspace{0.25em}\fontsize{9pt}{10pt}\selectfont\linkedin}}\horizontalseparator
-%     {\href{https://github.com/\git}{\faIcon{github}\hspace{0.25em}\fontsize{9pt}{10pt}\selectfont\git}}\horizontalseparator
-%     {\href{https://\website}{\faIcon{chrome}\hspace{0.25em}\fontsize{9pt}{10pt}\selectfont\website}}    
-%     }
-% }
 
 \newcommand{\horizontalseparator}{
     \hspace{0.5em}{\color{color-ruler}\rule[-0.07em]{0.08em}{0.8em}}\hspace{0.5em}
 }
+
+% list of contacts in a row
+\newcommand{\contactsrow}{
+    {\color{color-text}
+    \fontsize{10pt}{12pt}\selectfont
+    {\href{mailto:\email}{\faIcon{at}\hspace{0.25em}\fontsize{9pt}{10pt}\selectfont\email}}\horizontalseparator
+    {\href{tel:\phone}{\faIcon{phone-square-alt}\hspace{0.25em}\fontsize{9pt}{10pt}\selectfont\phone}}\horizontalseparator
+    {\href{https://www.linkedin.com/in/\linkedin/}{\faIcon{linkedin}\hspace{0.25em}\fontsize{9pt}{10pt}\selectfont\linkedin}}\horizontalseparator
+    {\href{https://github.com/\git}{\faIcon{github}\hspace{0.25em}\fontsize{9pt}{10pt}\selectfont\git}}\horizontalseparator
+    {\href{https://\website}{\faIcon{chrome}\hspace{0.25em}\fontsize{9pt}{10pt}\selectfont\website}}    
+    }
+}
+
 

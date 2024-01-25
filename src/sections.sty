@@ -37,14 +37,14 @@
 }
 
 % table layout - two columns, two rows, second row merged
-% \renewcommand\cellalign{cl}
-% \newcommand{\tablelayoutmerged}[3]{
-%     \fontsize{11pt}{11pt}\selectfont
-%     \begin{tabularx}{\textwidth}{@{}Xr@{}}
-%         \stylestrong{#1} & \styleitalic{#2}\\
-%         \multicolumn{2}{@{}l}{\styleemphasis{\makecell{#3}}}\\
-%     \end{tabularx}
-% }
+\renewcommand\cellalign{cl}
+\newcommand{\tablelayoutmerged}[3]{
+    \fontsize{11pt}{11pt}\selectfont
+    \begin{tabularx}{\textwidth}{@{}Xr@{}}
+        \stylestrong{#1} & \styleitalic{#2}\\
+        \multicolumn{2}{@{}l}{\styleemphasis{\makecell{#3}}}\\
+    \end{tabularx}
+}
 
 % table layout - one column and three rows (fits in two-column page layout)
 \newcommand{\tablelayoutsingle}[3]{
