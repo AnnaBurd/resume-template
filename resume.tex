@@ -11,34 +11,22 @@
 \input{src/contacts.tex}
 \input{src/content.tex}
 
-\begin{document}  
-    \begin{center} 
-        {\color{color-text}
-        \headerFontFamily
-        \fontsize{20pt}{24pt}\selectfont
-        \firstname\hspace{0.2em}\lastname}
-
-        {\color{color-accent}\jobtitle}
-        \vspace*{0.1em}
- 
-        {\contacts}
-    \end{center}
-
+\begin{document}
     
-    {
-    \vspace*{-0.1em}
-    \color{color-text}
-    \fontsize{11pt}{11pt}\selectfont
-    \about
-    \vspace*{0.1em}
-    }
+    \profilepicture{images/profile-photo.jpg}
+
+    \name{\firstname}{\lastname}
+
+    \position{\jobtitle}
+ 
+    \contacts
+ 
+    \aboutme{\about}
 
     \skillssection
 
-    \projectssection
-
     \experiencesection
 
-    \educationsection
+    \twocolumnlayout{\educationsection}{\certificationssection}
 
 \end{document}

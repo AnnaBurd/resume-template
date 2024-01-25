@@ -20,9 +20,19 @@
 %%% HYPERLINKS %%%
 \usepackage{hyperref}
 
+%%% GRAPHICS %%%
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{tikzpagenodes}
+\usetikzlibrary{positioning}
+\usetikzlibrary{calc}
+
 %%% PAGE SETTINGS %%%
 % page margins
-\usepackage[left=2.54cm,right=2.54cm,top=2cm,bottom=2cm]{geometry}
+\usepackage[left=2cm,right=2cm,top=1.5cm,bottom=2cm]{geometry}
+
+% allow to use multicolumn layout
+\usepackage{multicol}
 
 % page numbering
 \pagenumbering{gobble}	% turn off page numbers
@@ -37,6 +47,8 @@
 % page background color
 \pagecolor{color-bg}
 
+% better letter spacing control
+\usepackage{fontspec}
 
 %%% TABLE SETTINGS %%%
 % allow to set a table with the requested total width
@@ -44,11 +56,11 @@
 % allow line breaks in table cells
 \usepackage{makecell}
 
+
 %%% BULLET LIST SETTINGS %%%
 \usepackage{enumitem}
 % allow optional arguments for bullet lists
 \usepackage{xparse}
-
 
 
 %%% LANGUAGE SETTINGS %%%
