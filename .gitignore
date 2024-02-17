@@ -1,5 +1,7 @@
 ## Generated output files:
 *.pdf
+!docs/резюме.pdf
+!docs/resume.pdf
 
 ## Latex/XeLaTex log files:
 *.aux
