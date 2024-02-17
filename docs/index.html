@@ -2,9 +2,55 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>test</title>
+    <title>Resume Links</title>
+    <style>
+      body {
+        font-family: "Roboto", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f8f8f8;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .container {
+        width: 600px;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        margin: 0 20px; /* Added horizontal margins */
+      }
+      h1 {
+        text-align: center;
+        color: #333;
+        font-size: 32px;
+        margin-bottom: 30px;
+      }
+      .resume-link {
+        display: block;
+        padding: 15px;
+        text-align: center;
+        margin-bottom: 20px;
+        background-color: #ff7e67;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 25px;
+        transition: background-color 0.3s;
+        font-size: 18px;
+      }
+      .resume-link:hover {
+        background-color: #ff5c4d;
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <h1>Resume Links</h1>
+      <a href="резюме.pdf" class="resume-link">Резюме (PDF)</a>
+      <a href="resume.pdf" class="resume-link">Resume (PDF)</a>
+    </div>
+  </body>
 </html>
