@@ -2,7 +2,7 @@
 
 A free LaTex resume template for software developers to automate tailoring and jumpstart the career! See the preview below:
 
-![Alt Text](preview/resume.png)
+![Alt Text](/docs/preview/resume_page_1.png)
 
 ## About The Project
 
@@ -25,11 +25,44 @@ This template is a simplified version inspired by the [Awesome CV and Junhao Don
 
 2. Install [TeX Live](https://www.tug.org/texlive/) - [Easy Install Link](https://mirror.ctan.org/systems/texlive/tlnet/install-tl-windows.exe)
 
-> Note: Tex Live can take a long time to download depending on your internet connection.
+   > Note: Tex Live can take a long time to download depending on your internet connection.
 
-3. Set `latex-workshop.latex.build.forceRecipeUsage: false` in VSCode configuration file `settings.json` - this enables "Magic Comments" of the LaTex Workshop extension.
+3. Add the following `latex-workshop` configuration to `settings.json` in VSCode:
+
+   ```json
+   "latex-workshop.latex.build.forceRecipeUsage": false, // Enable "%magic comments" in the tex file
+   "latex-workshop.latex.outDir": "%DIR%/out", // Output directory for the build files
+   "latex-workshop.latex.magic.args": [
+      "-synctex=1",
+      "-interaction=nonstopmode",
+      "-file-line-error",
+      "--output-directory=%OUTDIR%",
+      "-jobname=Name of the output file", // Output file name
+      "%DOC%"
+   ],
+   ```
+
 4. Update file content in `src/contacts.tex` and `src/content.tex`.
-5. Open `resume.tex` or `resume-v1.tex` or `резюме.tex` and build file with `Ctrl+Alt+B` or with an extension button.
+5. Open `resume_v2.tex` or `resume-v1.tex` and build file with `Ctrl+Alt+B` or with an extension button.
+
+## Additional scripts
+
+Once the resume is ready, you can use the following scripts to build up-to-date resume pdfs links. See the example - hosted on the GitHub Pages 'docs' folder of this repository - [https://annaburd.github.io/resume-template/](https://annaburd.github.io/resume-template/).
+
+```bash
+npm install # Install dependencies
+
+# Copy the latest resume PDFs to the docs folder with the correct names
+npm run copy-pdfs
+
+# Update the links in the index.html file to point to the latest resume PDFs
+npm run update-links
+
+# Generate png preview of the resume for the README
+npm run generate-preview
+
+npm run update-docs # Do all the above steps in one command
+```
 
 ## Contributions
 

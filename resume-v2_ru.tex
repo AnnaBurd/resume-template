@@ -1,7 +1,7 @@
 % Enable magic comments to set the root document and compiler -> set   "latex-workshop.latex.build.forceRecipeUsage": false, in VSCode settings.json
 
 % "Magic" comment of the VS Code Latex-Workshop extension to set the root document, see https://github.com/James-Yu/LaTeX-Workshop/wiki/Compile#the-root-file
-% !TEX root = resume.tex
+% !TEX root = resume-v2_ru.tex
 
 % "Magic" comment of the VS Code Latex-Workshop extension to set the compiler, see https://github.com/James-Yu/LaTeX-Workshop/wiki/Compile#magic-comments
 % !TEX program = xelatex
@@ -9,7 +9,7 @@
 \input{src/preamble.tex}
 \input{src/sections.sty}
 \input{src/contacts.tex}
-\input{src/content.tex}
+\input{src/content.ru.tex}
 
 \begin{document}
     
@@ -26,6 +26,8 @@
     \skillssection
 
     \experiencesection
+
+    \vspace*{-0.7em} % TODO: adjust this value to fit a single page
 
     \twocolumnlayout{\educationsection}{\certificationssection}
 

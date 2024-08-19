@@ -1,0 +1,22 @@
+{
+  "name": "resume-template",
+  "version": "1.0.0",
+  "description": "A free LaTex resume template for software developers to automate tailoring and jumpstart the career!",
+  "main": "resume.tex",
+  "type": "module",
+  "scripts": {
+    "copy-pdfs": "node scripts/copy_pdf.js --inputFilename=./out/resume-v2_ru.pdf && node scripts/copy_pdf.js --inputFilename=./out/resume-v2_en.pdf",
+    "update-links": "node scripts/update_html_link.js",
+    "generate-preview": "node scripts/generate_preview.js",
+    "update-docs": "npm run copy-pdfs && npm run update-links && npm run generate-preview"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "pdf2json": "^3.1.4",
+    "pdf2pic": "^3.1.1"
+  },
+  "devDependencies": {
+    "pdf-to-png-converter": "^3.2.0"
+  }
+}

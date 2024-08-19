@@ -1,7 +1,5 @@
 ## Generated output files:
-*.pdf
-!docs/резюме.pdf
-!docs/resume.pdf
+out
 
 ## Latex/XeLaTex log files:
 *.aux
@@ -12,3 +10,6 @@
 *.synctex*
 *.fls
 *.fdb_latexmk
+
+## Node.js:
+node_modules
