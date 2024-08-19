@@ -37,7 +37,6 @@ This template is a simplified version inspired by the [Awesome CV and Junhao Don
       "-interaction=nonstopmode",
       "-file-line-error",
       "--output-directory=%OUTDIR%",
-      "-jobname=Name of the output file", // Output file name
       "%DOC%"
    ],
    ```
@@ -51,7 +50,9 @@ Once the resume is ready, you can use the following scripts to build up-to-date 
 
 ```bash
 npm install # Install dependencies
+```
 
+```bash
 # Copy the latest resume PDFs to the docs folder with the correct names
 npm run copy-pdfs
 

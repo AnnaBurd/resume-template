@@ -6,7 +6,7 @@ const pngPages = await pdfToPng(
     disableFontFace: true, // When `false`, fonts will be rendered using a built-in font renderer that constructs the glyphs with primitive path commands. Default value is true.
     useSystemFonts: true, // When `true`, fonts that aren't embedded in the PDF document will fallback to a system font. Default value is false.
     enableXfa: false, // Render Xfa forms if any. Default value is false.
-    viewportScale: 2.0, // The desired scale of PNG viewport. Default value is 1.0.
+    viewportScale: 3.0, // The desired scale of PNG viewport. Default value is 1.0.
     outputFolder: "docs/preview", // Folder to write output PNG files. If not specified, PNG output will be available only as a Buffer content, without saving to a file.
     outputFileMask: "resume", // Output filename mask. Default value is 'buffer'.
     pdfFilePassword: "pa$$word", // Password for encrypted PDF.
